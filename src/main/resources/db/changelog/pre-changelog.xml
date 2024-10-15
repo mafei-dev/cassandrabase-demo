@@ -3,10 +3,14 @@
 <changeLog>
     <changeSet id="test-1" author="mafei" order="1" consistencyLevel="ALL">
         <statement>
-            TEST pre-changelog.xml
+            CREATE TABLE changelog_lock (
+            id TEXT,
+            major_version INT,
+            locked BOOLEAN,
+            lock_time TIMESTAMP,
+            locked_by TEXT,
+            PRIMARY KEY ((id,major_version))
+            );
         </statement>
-        <rollbackStatement>
-            TEST ROLLBACK STATEMENT pre-changelog.xml
-        </rollbackStatement>
     </changeSet>
 </changeLog>

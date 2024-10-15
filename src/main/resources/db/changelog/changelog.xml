@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE changeLog>
+<!DOCTYPE changeLog >
 <changeLog>
     <changeSet id="test-1" author="mafei" order="1" consistencyLevel="ALL">
         <statement>
-            TEST changelog.xml
+            CREATE TABLE IF NOT EXISTS test_table1
+            (
+            id UUID,
+            service_name TEXT,
+            PRIMARY KEY (ID, SERVICE_NAME)
+            )
         </statement>
-        <rollbackStatement>
-            TEST ROLLBACK STATEMENT changelog.xml
-        </rollbackStatement>
     </changeSet>
 </changeLog>
