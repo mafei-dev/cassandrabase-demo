@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE changeLog>
+<changeLog>
+    <changeSet id="test-1" author="mafei" order="1" consistencyLevel="ALL">
+        <statement>
+            TEST pre-changelog.xml
+        </statement>
+        <rollbackStatement>
+            TEST ROLLBACK STATEMENT pre-changelog.xml
+        </rollbackStatement>
+    </changeSet>
+</changeLog>
